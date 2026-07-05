@@ -10,8 +10,10 @@ Notas:
 from peliculas import peliculas
 import funciones
 
-#Conexion con la BD
-conexionBD=funciones.conetar()
+pelis={
+
+    
+}
 
 opc=""
 
@@ -21,22 +23,22 @@ while opc!="7":
     match opc:
         case "1":
             funciones.borrarPantalla()
-            peliculas.agregarPeliculas(conexionBD)
+            peliculas.agregarPeliculas(pelis)
         case "2":
             funciones.borrarPantalla()
-            peliculas.borrarPeliculas(conexionBD)
+            peliculas.borrarPeliculas(pelis)
         case "3":
             funciones.borrarPantalla()
-            peliculas.modificarPeliculas(conexionBD)
+            peliculas.modificarPeliculas(pelis)
         case "4":
             funciones.borrarPantalla()
-            peliculas.mostrarPeliculas(conexionBD)
+            peliculas.mostrarPeliculas(pelis)
         case "5":
             funciones.borrarPantalla()
-            peliculas.buscarPeliculas(conexionBD)
+            peliculas.buscarPeliculas(pelis)
         case "6":
             funciones.borrarPantalla()
-            peliculas.limpiarPeliculas(conexionBD)
+            peliculas.limpiarPeliculas(pelis)
         case "7":
             funciones.borrarPantalla()
             funciones.terminarSistema()
